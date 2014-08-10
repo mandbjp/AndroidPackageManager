@@ -1,0 +1,25 @@
+<ons-page ng-controller="DeviceListCtrl" style="background-color: #f9f9f9;">
+  <ons-toolbar>
+    <div class="left"><ons-back-button>Back</ons-back-button></div>
+    <div class="center">Device List</div>
+  </ons-toolbar>
+
+  <ons-list>
+    <ons-list-header>
+      Device Information
+    </ons-list-header>
+    <ons-list-item ng-repeat="device in devices">
+      <ons-row ng-click="goPackageList(device)">
+        <ons-col width="38px">
+          <ons-icon icon="mobile-phone" fixed-width="true" style="color: #999"></ons-icon>
+        </ons-col>
+        <ons-col>
+          {{device.device_id}}
+        </ons-col>
+        <ons-col>
+          {{device.status}}
+        </ons-col>
+      </ons-row>
+    </ons-list-item>
+  </ons-list>
+</ons-page>

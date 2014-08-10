@@ -1,0 +1,17 @@
+<ons-page ng-controller="PackageListCtrl" style="background-color: #f9f9f9;">
+  <ons-toolbar>
+    <div class="left"><ons-back-button>Back</ons-back-button></div>
+    <div class="center">Package List</div>
+  </ons-toolbar>
+
+  <ons-list>
+    <ons-list-header>Device: {{device_id}}</ons-list-header>
+    <ons-list-item ng-repeat="package in packages">
+      <ons-row ng-click="goPackageDetail(package)">
+        <ons-col>
+          {{package}}
+        </ons-col>
+      </ons-row>
+    </ons-list-item>
+  </ons-list>
+</ons-page>
